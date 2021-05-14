@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php
+  labels:
+    tier: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: php
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: php
+        tier: backend
+    spec:
+      volumes:
+      - name: dir
+        hostPath:
+          path: /myapp
+      containers:
+      - name: php
+        image: kiyange26773/mpesa-web-portal-dev
+        volumeMounts:
+        - name: dir
+          mountPath: /myapp
+      initContainers:
+      - name: install
+        image: busybox
+        volumeMounts:
+        - name: dir
+          mountPath: /myapp
+        command:
+        - cp
+        - "-r"
+        - "/var/www/."
+        - "/myapp/app"
