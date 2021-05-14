@@ -22,7 +22,7 @@ spec:
           path: /myapp
       containers:
       - name: php
-        image: kiyange26773/mpesa-web-portal-dev
+        image: kiyange26773/mpesakyadevapp
         volumeMounts:
         - name: dir
           mountPath: /myapp
