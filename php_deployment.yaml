@@ -19,21 +19,21 @@ spec:
       volumes:
       - name: dir
         hostPath:
-          path: /myapp
+          path: /source
       containers:
       - name: php
-        image: kiyange26773/mpesakyadevapp
+        image: kiyange26773/mpesakyadevapp:v1.0
         volumeMounts:
         - name: dir
-          mountPath: /myapp
+          mountPath: /source
       initContainers:
       - name: install
         image: busybox
         volumeMounts:
         - name: dir
-          mountPath: /myapp
+          mountPath: /source
         command:
         - cp
         - "-r"
         - "/var/www/."
-        - "/myapp/app"
+        - "/source/app"
