@@ -22,7 +22,7 @@ spec:
           path: /appdir
       containers:
       - name: php
-        image: kiyange26773/mpesakyadevapp:v1.4
+        image: kiyange26773/kyadev:v1.0
         volumeMounts:
         - name: dir
           mountPath: /appdir
