@@ -20,7 +20,7 @@ spec:
       volumes:
       - name: dir
         hostPath:
-          path: /kya-dev
+          path: /kya-dev1
       - name: config
         configMap:
           name: nginx-config
@@ -32,7 +32,7 @@ spec:
         image: nginx
         volumeMounts:
         - name: dir
-          mountPath: /kya-dev
+          mountPath: /kya-dev1
         - name: config
           mountPath: /etc/nginx/conf.d
         ports:
