@@ -22,7 +22,7 @@ spec:
           path: /mpesasorce
       containers:
       - name: php
-        image: kiyange26773/
+        image: kiyange26773/mpesakyawebportal-dev:latest
         volumeMounts:
         - name: dir
           mountPath: /mpesasorce
