@@ -15,7 +15,7 @@
         @include('layout.flash-messages')
 
         <div class="card-body">
-            <p class="text-center py-2 h5"><strong>M-PESA KYA PORTAL</strong></p>
+            <p class="text-center py-2 h5"><strong>M-PESAKYA PORTAL</strong></p>
             <login-form></login-form>
             {{-- <router-view></router-view> --}}
             <vue-progress-bar></vue-progress-bar>
