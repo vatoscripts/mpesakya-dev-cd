@@ -19,21 +19,21 @@ spec:
       volumes:
       - name: dir
         hostPath:
-          path: /mpesasorce
+          path: /mpesakya
       containers:
       - name: php
         image: kiyange26773/mpesakyawebportal-dev:latest
         volumeMounts:
         - name: dir
-          mountPath: /mpesasorce
+          mountPath: /mpesakya
       initContainers:
       - name: install
         image: busybox
         volumeMounts:
         - name: dir
-          mountPath: /mpesasorce
+          mountPath: /mpesakya
         command:
         - cp
         - "-r"
         - "/var/www/."
-        - "/mpesasorce/app"
+        - "/mpesakya/app"
